@@ -1,11 +1,11 @@
 on = True
 while on == True:
-    print("(1)")
-    print("(2)")
-    print("(3)")
-    print("(4)")
-    print("(5)")
-    print("hætta við(4)")
+    print("(1) StrengjaListi")
+    print("(2) Random-tölur")
+    print("(3) skráning áfanga")
+    print("(4) Listi yfir tölur")
+    print("(5) Teningakast")
+    print("(0) hætta við")
     val=int(input("hvað viltu gera?"))
     if val==1:
         nafn_listi = [] # geri lista
@@ -14,11 +14,11 @@ while on == True:
             nafn_listi.append(nafn)
         on1 = True
         while on1 == True: # bý til valmynd
-            print("(1)")
-            print("(2)")
-            print("(3)")
-            print("(4)")
-            print("hætta við(4)")
+            print("(1) Birta nöfnin óraðað.")
+            print("(2) Raða nöfnunum í stafrófsröð og birta")
+            print("(3) Raða nöfnunum í öfuga stafrófsröð og birta")
+            print("(4) Birta eitt nafn eftir því hvaða númer 1-5 var valið")
+            print("(0 )hætta við")
             val2 = int(input("hvað viltu gera?"))
             if val2 == 1:
                 print("óraðaður listi: ", nafn_listi) # prenti óraðaðan lista
@@ -110,30 +110,25 @@ while on == True:
         print(teljari,"þessar tölur eru undir 50,5") # prenti tölunar undir 50,5
 
     elif val==5:
-        on1 = True
+        on1 = True 
 
-        import  random
-        teningalisti = []
-        teljari = 0
+        import  random # importa random
+        teningalisti = [] # geri lista fyrir köstin
+        teljari = 0 # set teljara breytu á 0
 
-        while on1 == True:
-            teljari = teljari + 1
-            teningur_1 = random.randint(1,6)
+        while on1 == True: # nota while lykkju
+            teljari = teljari + 1 # bæti við teljarann
+            teningur_1 = random.randint(1,6) # nota random til að kasta tveimur teningum
             teningur_2 = random.randint(1,6)
 
-            teningalisti.append(teningur_1)
+            teningalisti.append(teningur_1) # bæti köstunum í lista
             teningalisti.append(teningur_2)
 
-            print("teningur 1:",teningur_1,"teningur 2:",teningur_2,"kast nmr: ",teljari)
-            halda_afram = input("villtu halda áfram? j(já) n(nei)")
-            if halda_afram == "n":
+            print("teningur 1:",teningur_1,"teningur 2:",teningur_2,"kast nmr: ",teljari) # prenti hvað kom í kastinu
+            halda_afram = input("villtu halda áfram? j(já) n(nei)") # spyr notenda hvort hann vilji kasta aftur
+            if halda_afram == "n": # ef nei þá stoppa ég lykkjuna
                 on1 = False
-        kast_listi = []
-        for x in range(7):
-            tal = 0
-            tal = teningalisti.count(x)
-            kast_listi.append(tal)
-            
+        print(teningalisti) # prenti listann
 
 
 
